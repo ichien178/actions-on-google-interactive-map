@@ -3,10 +3,10 @@ const path = require('path');
 module.exports = {
   target: 'node',
   mode: "development",
-  entry: "./src/app.ts",
+  entry: "./web/src/app.ts",
   devtool: 'inline-source-map',
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'web/dist'),
     filename: 'app.js'
   },
   resolve: {
@@ -14,7 +14,7 @@ module.exports = {
   },
   devServer: {
     // webpack-dev-serverの公開フォルダ
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'web/dist'),
     // open: true
   },
   module: {
