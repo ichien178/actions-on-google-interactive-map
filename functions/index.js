@@ -22,13 +22,13 @@ app.intent('welcome', conv => {
   }));
 });
 
-app.intent('start', conv => {
-  conv.ask('カウントを開始します。');
+app.intent('nagoya', conv => {
+  conv.ask('名古屋駅に移動します。');
 
   conv.ask(new HtmlResponse({
     suppress: true,
     data: {
-      starting: true
+      nagoya: true
     }
   }));
 });

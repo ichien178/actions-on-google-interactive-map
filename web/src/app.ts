@@ -21,7 +21,7 @@ class App implements InteractiveCanvas {
 
     const callbacks = {
       onUpdate(data: any) {
-        if ("osaka" in data) {
+        if ("nagoya" in data) {
           map.jumpTo({
             center: MapConst.POINT_NAGOYA_STATION
           });
