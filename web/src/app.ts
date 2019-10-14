@@ -1,21 +1,21 @@
 import { MapContainer } from "./map";
-import { interactiveCanvasContainer } from "./interactivecanvasContainer";
 import window from './util/window';
-
+import { InteractiveCanvasContainer } from "./interactivecanvasContainer";
 
 class App {
-  interactiveCanvas: any;
-
+  /**
+   * メイン処理
+   */
   public main = (): void => {
-    const mapContainer = MapContainer.getInstance();
-    mapContainer.init();
+    MapContainer.getInstance().init();
 
-    const map = mapContainer.getMap();
+    const map = MapContainer.getInstance().getMap();
     if (!map) {
       return;
     }
-    console.log(window);
-    interactiveCanvasContainer(window.interactiveCanvas, map);
+
+    const interactivecanvasContainer = new InteractiveCanvasContainer(window.interactiveCanvas, map);
+    interactivecanvasContainer.readyCallback();
   }
 }
 
