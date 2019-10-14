@@ -11,7 +11,7 @@ class App {
     if (!map) {
       return;
     }
-    interactiveCanvasContainer();
+    interactiveCanvasContainer(map);
   }
 }
 
