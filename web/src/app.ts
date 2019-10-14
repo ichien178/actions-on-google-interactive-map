@@ -1,7 +1,10 @@
 import { MapContainer } from "./map";
 import { interactiveCanvasContainer } from "./interactivecanvasContainer";
+import window from './util/window';
+
 
 class App {
+  interactiveCanvas: any;
 
   public main = (): void => {
     const mapContainer = MapContainer.getInstance();
@@ -11,7 +14,8 @@ class App {
     if (!map) {
       return;
     }
-    interactiveCanvasContainer(map);
+    console.log(window);
+    interactiveCanvasContainer(window.interactiveCanvas, map);
   }
 }
 
