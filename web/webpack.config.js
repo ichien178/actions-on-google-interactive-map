@@ -15,6 +15,7 @@ module.exports = {
   devServer: {
     // webpack-dev-serverの公開フォルダ
     contentBase: path.join(__dirname, 'dist'),
+    disableHostCheck: true
     // open: true
   },
   module: {

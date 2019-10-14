@@ -1,16 +1,13 @@
 import mapboxgl from "mapbox-gl";
+import { MapConst } from "./const";
 
 export const interactiveCanvasContainer = (interactiveCanvas: any, map: mapboxgl.Map) => {
-  // map.jumpTo({
-  //   center: new mapboxgl.LngLat(136.881537, 35.170915)
-  // });
 
   const callbacks = {
     onUpdate(data: any) {
       if ("nagoya" in data) {
-        console.log('名古屋に移動します！！！！');
-        map.jumpTo({
-          center: new mapboxgl.LngLat(136.881537, 35.170915)
+        map.flyTo({
+          center: MapConst.POINT_NAGOYA_STATION
         });
       }
       // if ("reset" in data) {
