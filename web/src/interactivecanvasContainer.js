@@ -1,4 +1,8 @@
 export const interactiveCanvasContainer = (map) => {
+  map.jumpTo({
+    center: MapConst.POINT_NAGOYA_STATION
+  });
+
   const callbacks = {
     onUpdate(data) {
       if ("nagoya" in data) {
