@@ -11,6 +11,7 @@
     "start:dev": "webpack-dev-server --mode=development --open"
   },
   "devDependencies": {
+    "@types/actions-on-google": "^1.10.3",
     "@types/mapbox-gl": "^0.54.4",
     "ts-loader": "^6.2.0",
     "typescript": "^3.6.4",
