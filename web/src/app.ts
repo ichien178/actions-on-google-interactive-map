@@ -1,6 +1,5 @@
 import { MapContainer } from "./map";
-import { interactiveCanvas } from "./interactivecanvas";
-
+import { interactiveCanvasContainer } from "./interactivecanvasContainer";
 
 class App {
 
@@ -12,7 +11,7 @@ class App {
     if (!map) {
       return;
     }
-    interactiveCanvas();
+    interactiveCanvasContainer();
   }
 }
 

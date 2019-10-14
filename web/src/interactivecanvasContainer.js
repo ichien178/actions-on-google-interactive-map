@@ -1,4 +1,4 @@
-export const interactiveCanvas = (map) => {
+export const interactiveCanvasContainer = (map) => {
   const callbacks = {
     onUpdate(data) {
       if ("nagoya" in data) {
